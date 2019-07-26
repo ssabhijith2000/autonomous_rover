@@ -6,14 +6,14 @@
 #define E2 7
 #define E3 8
 #define E4 9
-#define MLF1  A0  //motor control pins
-#define MLF2  A1
-#define MRF1  A2
-#define MRF2  A3
-#define MLB1  A4
-#define MLB2  A5
-#define MRB1  A6
-#define MRB2  A7
+#define MLF1 A0  //motor pins
+#define MLF2 A1
+#define MRF1 A2
+#define MRF2 A3
+#define MLB1 A4
+#define MLB2 A5
+#define MRB1 A6
+#define MRB2 A7
 long duration_1,duration_2,duration_3,duration_4;
 int distance_l,distance_r,distance_f,distance_b;
 
@@ -116,46 +116,46 @@ void backdetection()
      }
 }
 
-void forward()
-{analogWrite(MLF1, 250);
+void backward()
+{analogWrite(MLF1, 200);
  analogWrite(MLF2, 0);
- analogWrite(MRF1, 250);
+ analogWrite(MRF1, 200);
  analogWrite(MRF2, 0);
- analogWrite(MLB1, 250);
+ analogWrite(MLB1, 200);
  analogWrite(MLB2, 0);
- analogWrite(MRB1, 250);
- analogWrite(MRB2, 0);
-}
-
-void right()
-{ analogWrite(MLF1, 250);
- analogWrite(MLF2, 0);
- analogWrite(MRF1, 250);
- analogWrite(MRF2, 0);
- analogWrite(MLB1, 250);
- analogWrite(MLB2, 0);
- analogWrite(MRB1, 250);
+ analogWrite(MRB1, 200);
  analogWrite(MRB2, 0);
 }
 
 void left()
-{analogWrite(MLF1, 250);
+{ analogWrite(MLF1, 200);
  analogWrite(MLF2, 0);
- analogWrite(MRF1, 250);
- analogWrite(MRF2, 0);
- analogWrite(MLB1, 250);
+ analogWrite(MRF1, 0);
+ analogWrite(MRF2, 200);
+ analogWrite(MLB1, 200);
  analogWrite(MLB2, 0);
- analogWrite(MRB1, 250);
+ analogWrite(MRB1, 0);
+ analogWrite(MRB2, 200);
+}
+
+void right()
+{analogWrite(MLF1, 0);
+ analogWrite(MLF2, 200);
+ analogWrite(MRF1, 200);
+ analogWrite(MRF2, 0);
+ analogWrite(MLB1, 0);
+ analogWrite(MLB2, 200);
+ analogWrite(MRB1, 200);
  analogWrite(MRB2, 0);
 }
 
-void backward()
-{analogWrite(MLF1, 250);
- analogWrite(MLF2, 0);
- analogWrite(MRF1, 250);
- analogWrite(MRF2, 0);
- analogWrite(MLB1, 250);
- analogWrite(MLB2, 0);
- analogWrite(MRB1, 250);
- analogWrite(MRB2, 0);
+void forward()
+{analogWrite(MLF1, 0);
+ analogWrite(MLF2, 200);
+ analogWrite(MRF1, 0);
+ analogWrite(MRF2, 200);
+ analogWrite(MLB1, 0);
+ analogWrite(MLB2, 200);
+ analogWrite(MRB1, 0);
+ analogWrite(MRB2, 200);
 }
