@@ -1,2 +1,2 @@
 # autonomous_rover
-arduino code for autonomous rover with ultrasound
+Arduino firmware for an autonomous rover controlled by ultrasonic distance sensors mounted on four directions.
